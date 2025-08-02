@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products – HalleyX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f8cde8;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #a1005f;
+    }
+    .container {
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s;
+      background: #fff;
+    }
+    .product:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+    .product .info {
+      padding: 10px;
+      text-align: center;
+    }
+    .info h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+    .info p {
+      margin: 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>HalleyX Products</h1>
+</header>
+
+<div class="container">
+  <div class="grid">
+    <!-- Kurti -->
+    <div class="product">
+      <img src="images/kurti.jpg" alt="Kurti" />
+      <div class="info">
+        <h3>Stylish Kurti</h3>
+        <p>₹699</p>
+      </div>
+    </div>
+
+    <!-- Saree -->
+    <div class="product">
+      <img src="images/saree.jpg" alt="Saree" />
+      <div class="info">
+        <h3>Elegant Saree</h3>
+        <p>₹1,299</p>
+      </div>
+    </div>
+
+    <!-- Tops -->
+    <div class="product">
+      <img src="images/top.jpg" alt="Top" />
+      <div class="info">
+        <h3>Trendy Top</h3>
+        <p>₹499</p>
+      </div>
+    </div>
+
+    <!-- Kurta Sets -->
+    <div class="product">
+      <img src="images/kurtaset.jpg" alt="Kurta Set" />
+      <div class="info">
+        <h3>Kurta Set Combo</h3>
+        <p>₹1,199</p>
+      </div>
+    </div>
+
+    <!-- Floral -->
+    <div class="product">
+      <img src="images/floral.jpg" alt="Floral Dress" />
+      <div class="info">
+        <h3>Floral Dress</h3>
+        <p>₹899</p>
+      </div>
+    </div>
+
+    <!-- Frocks -->
+    <div class="product">
+      <img src="images/frock.jpg" alt="Frock" />
+      <div class="info">
+        <h3>Party Frock</h3>
+        <p>₹799</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

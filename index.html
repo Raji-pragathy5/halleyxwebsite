@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HalleyX E-commerce</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffe6f0;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #d63384;
+    }
+
+    .search-bar {
+      width: 40%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .menu-bar {
+      display: flex;
+      justify-content: center;
+      background-color: #fddde6;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    .menu-bar a {
+      margin: 0 10px;
+      color: #000;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .highlight {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .highlight h2 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .highlight button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      background-color: #fff0f5;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px 0;
+      background-color: #fff;
+    }
+
+    .product-card {
+      background-color: #fff5f8;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 10px;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+      color: #d63384;
+    }
+
+    .product-card p {
+      color: #333;
+      margin: 5px 0;
+    }
+
+    .rating {
+      margin: 5px 0;
+    }
+
+    .sizes {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .product-card select {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="user-info">
+    <h2>Enter Your Details</h2>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="address" placeholder="Address" required>
+  </div>
+<nav style="text-align: center; margin-top: 20px;">
+  <a href="index.html">🏠 Home</a> |
+  <a href="cart.html">🛒 Cart</a> |
+  <a href="orders.html">📦 Orders</a> |
+  <a href="profile.html">👤 Profile</a>
+</nav>
+
+  <header class="navbar">
+    <div class="logo">HalleyX</div>
+    <input type="text" placeholder="Try Saree, Kurti or Search by Product Code" class="search-bar" />
+    <nav>
+      <a href="#">Become a Supplier</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Profile</a>
+      <a href="#">Cart</a>
+    </nav>
+  </header>
+
+  <div class="menu-bar">
+    <a href="#">Women Ethnic</a>
+    <a href="#">Women Western</a>
+    <a href="#">Men</a>
+    <a href="#">Kids</a>
+    <a href="#">Home & Kitchen</a>
+    <a href="#">Beauty & Health</a>
+    <a href="#">Jewellery</a>
+    <a href="#">Bags & Footwear</a>
+    <a href="#">Electronics</a>
+    <a href="#">Sports & Fitness</a>
+  </div>
+
+  <div class="highlight">
+    <h2>HalleyX Shopping — Explore More</h2>
+    <button onclick="alert('Redirecting to products...')">Shop Now</button>
+  </div>
+
+  <div class="features">
+    <div>🛍️ 7 Days Easy Return</div>
+    <div>💵 Cash on Delivery</div>
+    <div>🏷️ Lowest Prices</div>
+  </div>
+
+  <div class="container">
+    <section class="products">
+
+      <!-- Product Example -->
+      <div class="product-card">
+        <img src="../frontend/image/partywear.jpg" alt="partywear">
+        <h3>Partywear</h3>
+        <p>₹980</p>
+        <div class="sizes">Sizes: S, M, L, XL</div>
+        <select id="size-partywear">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+        </select>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <a href="product.html?name=Partywear&price=980&img=image/partywear.jpg">
+          <button>View Details</button>
+        </a>
+        <button onclick="submitOrder()">Order Now</button>
+
+        <button onclick="addToCart('Partywear', 980, 'size-partywear')">Add to Cart</button>
+
+      </div>
+
+      <!-- Repeat for each product -->
+      <div class="product-card">
+        <img src="../frontend/image/simplekurta.jpg" alt="simple kurta">
+        <h3>Simple Kurta</h3>
+        <p>₹349</p>
+        <div class="sizes">Sizes: S, M, L, XL</div>
+        <select id="size-simplekurta">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+        </select>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <a href="product.html?name=Simple%20Kurta&price=349&img=image/simplekurta.jpg">
+          <button>View Details</button>
+        </a>
+        <button onclick="submitOrder()">Order Now</button>
+
+        <button onclick="addToCart('Simple Kurta', 349, 'size-simplekurta')">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../frontend/image/floralfrocks.jpg" alt="floral frocks">
+        <h3>Floral Frocks</h3>
+        <p>₹799</p>
+        <div class="sizes">Sizes: S, M, L, XL</div>
+        <select id="size-floralfrocks">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+
+        </select>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <a href="product.html?name=Floral%20Frocks&price=799&img=image/floralfrocks.jpg">
+          <button>View Details</button>
+        </a>
+        <button onclick="submitOrder()">Order Now</button>
+
+        <button onclick="addtocart('Floral Frocks', 799, 'size-floralfrocks')">Add to cart</button>
+        </div>
+
+
+      <div class="product-card">
+        <img src="../frontend/image/saree image.jpg" alt="saree">
+        <h3>Saree</h3>
+        <p>₹580</p>
+        <div class="sizes">Sizes: S, M, L, XL</div>
+        <select id="size-saree">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+        </select>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <a href="product.html?name=Saree&price=580&img=image/saree%20image.jpg">
+          <button>View Details</button>
+        </a>
+        <button onclick="submitOrder()">Order Now</button>
+
+        <button onclick="addtocart('Saree', 580, 'size-saree')">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../frontend/image/leghanga.jpg" alt="leghanga">
+        <h3>Leghanga</h3>
+        <p>₹600</p>
+        <div class="sizes">Sizes: S, M, L, XL</div>
+        <select id="size-leghanga">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+
+        </select>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <a href="product.html?name=Leghanga&price=600&img=image/leghanga.jpg">
+          <button>View Details</button>
+        </a>
+        <button onclick="submitOrder()">Order Now</button>
+
+        <button onclick="addtocart('Leghanga', 600, 'size-leghanga')">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../frontend/image/tops.jpg" alt="tops">
+        <h3>Tops</h3>
+        <p>₹679</p>
+        <div class="sizes">Sizes: S, M, L, XL</div>
+        <select id="size-tops">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+
+        </select>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <a href="product.html?name=Tops&price=679&img=image/tops.jpg">
+          <button>View Details</button>
+        </a>
+        <button onclick="submitOrder()">Order Now</button>
+
+        <button onclick="addToCart('Tops', 679, 'size-tops')">Add to cart</button>
+      </div>
+
+    </section>
+  </div>
+
+ <script>
+  function addToCart(product, price, sizeId) {
+    const size = document.getElementById(sizeId).value;
+    if (!size) return alert("Please select size.");
+
+    const item = { product, price, size };
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(item);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`🛒 Added to cart: ${product} (${size})`);
+  }
+</script>
+
+
+  </script>
+</body>
+</html>  

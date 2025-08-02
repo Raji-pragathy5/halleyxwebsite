@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Orders - HalleyX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d63384;
+    }
+
+    .order-list {
+      margin-top: 30px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .order-item {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+    .order-item:last-child {
+      border-bottom: none;
+    }
+
+    .order-item h3 {
+      color: #333;
+      margin: 0;
+    }
+
+    .order-item p {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    .empty-message {
+      text-align: center;
+      color: #999;
+      margin-top: 40px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #d63384;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📦 My Orders</h1>
+
+  <div class="order-list" id="orderList">
+    <!-- Order history will be shown here -->
+  </div>
+
+  <a href="index.html">← Back to Home</a>
+
+  <script>
+    function loadOrders() {
+      const orders = JSON.parse(localStorage.getItem("cart")) || [];
+      const orderList = document.getElementById("orderList");
+
+      if (orders.length === 0) {
+        orderList.innerHTML = '<p class="empty-message">No orders yet.</p>';
+        return;
+      }
+
+      orders.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = "order-item";
+        div.innerHTML = `
+          <h3>${item.product}</h3>
+          <p>Size: ${item.size}</p>
+          <p>Price: ₹${item.price}</p>
+          <p>Order ID: #ORD${1000 + index}</p>
+        `;
+        orderList.appendChild(div);
+      });
+    }
+
+    window.onload = loadOrders;
+  </script>
+</body>
+</html>
